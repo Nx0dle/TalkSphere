@@ -1,1 +1,10 @@
 @import "semantic-ui";
+
+.ui.inverted.segment {
+  border-radius: 0;
+  padding: {
+    left: 10vw;
+    right: 10vw;
+  }
+  border-bottom: black solid 1px
+}
