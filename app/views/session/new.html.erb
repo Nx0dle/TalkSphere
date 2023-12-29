@@ -1,8 +1,7 @@
 <section id="sign-body" class="section-p2 section-m2">
   <div class="sign-card">
     <div class="sign-card-text">
-      <h3>Log In</h3>
-      <p>Log in to your free Alpha account</p>
+      <h3>Welcome<br>Back!</h3>
     </div>
     <div class="sign-card-form">
       <%= form_with(scope: :session, url: login_path, class: "users-form-container") do |f| %>
@@ -12,11 +11,11 @@
         <div class="users-form-shared-pass">
           <%= f.password_field :password, placeholder: "Password" %>
         </div>
-        <%= f.submit value: "Log In" %>
+        <%= f.submit value: "Log In", class: "btn-sign" %>
       <% end %>
     </div>
   </div>
   <div class="signup-card">
-     <p>New here? Sign Up</p>
+     <p>Don't have an account?  <a href="#">Sign up</a></p>
   </div>
 </section>

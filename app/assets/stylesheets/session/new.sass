@@ -2,7 +2,6 @@
   display: flex
   flex-direction: row
   justify-content: space-around
-  align-items: center
   height: 80vh
   border-radius: 10px
   background: #1B1C1D
@@ -10,13 +9,74 @@
   box-shadow: rgba(0, 0, 0, 0.07) 0 1px 2px, rgba(0, 0, 0, 0.07) 0 2px 4px, rgba(0, 0, 0, 0.07) 0 4px 8px, rgba(0, 0, 0, 0.07) 0 8px 16px, rgba(0, 0, 0, 0.07) 0 16px 32px, rgba(0, 0, 0, 0.07) 0 32px 64px
 
   .sign-card
+    padding: 1vh 1vw
     display: flex
     flex-direction: column
-    align-items: center
     justify-content: center
+    border-radius: 7px
+
+    .sign-card-text h3
+      font-size: 3vw
+      margin-bottom: 10vh
+
+    .sign-card-form
+      width: 100%
+      .users-form-container
+        display: flex
+        flex-direction: column
+        align-content: center
+        gap: 10px
+
+        .users-form-shared-email,
+        .users-form-shared-pass
+          width: 100%
+
+        #session_email,
+        #session_password
+          background: transparent
+          padding: 10px
+          outline: 0
+          color: grey
+          border: 0
+          border-bottom: grey solid 1px
+          width: 20vw
+          height: 4.5vh
+          font-size: 0.8vw
+        #session_email:focus,
+        #session_password:focus
+          border-bottom: #8A73FF solid 1px
+
+        .btn-sign
+          cursor: pointer
+          margin-top: 4vh
+          display: flex
+          justify-content: center
+          align-items: center
+          width: 100%
+          height: 5vh
+          color: white
+          font-weight: 500
+          font-size: .8vw
+          border-radius: .2vw
+          border: 0
+          background-color: #8A73FF
+          transition: 0.3s ease
+          box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px
+        .btn-sign:hover
+          border-radius: .6vw
+          background-color: rgba(138, 115, 255, 0.4)
+          box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px, rgba(0, 0, 0, 0.23) 0 3px 6px
 
   .signup-card
     display: flex
     flex-direction: column
     align-items: center
     justify-content: center
+
+    p
+      font-size: 1.5vw
+
+      a
+        font-size: 1.6vw
+        color: #8A73FF
+        text-decoration: underline
