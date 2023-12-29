@@ -1,5 +1,9 @@
+# frozen_string_literal: true
+
 class TalksphereController < ApplicationController
   def index
-    @messages = Message.all
+    @user = User.all
+    @message = Message.all
   end
+
 end
