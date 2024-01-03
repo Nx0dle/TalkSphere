@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html data-theme="dark">
   <head>
     <title>TalkSphere</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -8,11 +8,13 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
     <%= render 'talksphere/navigation' %>
+      <%= render 'layouts/messages' %>
     <%= yield %>
   </body>
 </html>
