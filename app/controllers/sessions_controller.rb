@@ -26,7 +26,7 @@ class SessionsController< ApplicationController
 
   def require_logout
     if current_user != @user
-      flash[:alert] = "You need to logout to perform that action."
+      flash[:alert] = "You are already logged in."
       redirect_to root_path
     end
   end
