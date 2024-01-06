@@ -10,6 +10,6 @@ consumer.subscriptions.create("TalksphereChannel", {
   },
 
   received(data) {
-    // Called when there's incoming data on the websocket for this channel
+    $('.messages-field').append(data.body)
   }
 });

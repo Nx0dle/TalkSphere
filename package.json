@@ -2,6 +2,7 @@
   "name": "TalkSphere",
   "version": "1.0.0",
   "dependencies": {
+    "@rails/actioncable": "^7.1.2",
     "jquery": "^3.7.1",
     "popper.js": "^1.16.1",
     "semantic-ui-sass": "^2.4.2"
