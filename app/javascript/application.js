@@ -2,6 +2,7 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 import "jquery"
+import "./channels"
 
 $(document).on('turbo:load', function() {
     const themeToggle = document.querySelector('.theme-toggle')
