@@ -1,1 +1,11 @@
-<h1 class="container-fluid">asdasd welcome</h1>
+<div class="main-grid">
+  <div class="main-message-box">
+    <article class="messages-field"><%= render @messages %></article>
+  </div>
+  <%= form_with(model: @message) do |f| %>
+      <div class="main-respond-box flex-row">
+      <%= f.text_field :body, placeholder: '...', id: 'message-content' %>
+      <%= f.button '<span class="material-symbols-outlined">send</span>'.html_safe, class: "send-btn flex-row" %>
+      </div>
+  <% end %>
+</div>

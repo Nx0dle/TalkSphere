@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  <nav>
+    <ul>
+      <li><strong><%= link_to 'TalkSphere', root_path, class: "brand" %></strong></li>
+    </ul>
+    <ul>
+      <li>
+        <details role="list" dir="rtl" class="menu-dropdown">
+          <summary aria-haspopup="listbox" role="button" class="outline">Actions</summary>
+          <ul role="listbox">
+            <% unless logged_in? %>
+              <li><%= link_to 'Log In', login_path %></li>
+            <% end %>
+            <% if logged_in? %>
+              <li><%= link_to 'Log Out', logout_path %></li>
+              <li><a href="">Account</a></li>
+            <% end %>
+          </ul>
+        </details>
+      </li>
+    </ul>
+  </nav>
+</div>

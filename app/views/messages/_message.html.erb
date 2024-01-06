@@ -1,3 +1,4 @@
-<div class="message">
+<div class="message-card">
   <p><strong><%= message.user.username %>: </strong><%= message.body %></p>
+  <p class="small"><%= time_tag(message.created_at) %></p>
 </div>

@@ -1,0 +1,41 @@
+.grid {
+    grid-template-columns: 1fr 5fr;
+}
+
+.left {
+    width: clamp(150px, 30vw, 400px);
+}
+
+.main-grid {
+    display: grid;
+    grid-template: 1fr .2fr / 1fr;
+}
+
+.messages-field {
+    height: 65vh;
+}
+
+#message-content {
+    margin: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: 0;
+}
+
+.send-btn {
+    margin: 0;
+    padding: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: 0;
+    width: clamp(40px ,5vh, 7vh);
+}
+
+.send-btn,
+#message-content {
+    height: clamp(40px ,5vh, 7vh);
+}
+
+.send-btn > .material-symbols-outlined {
+    font-size: 3vh;
+}

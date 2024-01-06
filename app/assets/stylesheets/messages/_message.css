@@ -1,0 +1,8 @@
+.message-card p {
+    margin: 0;
+}
+
+.message-card .small {
+    font-size: .7rem;
+    margin-bottom: 15px;
+}

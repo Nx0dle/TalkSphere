@@ -1,22 +1,13 @@
-<section id="sign-body">
-  <div class="sign-card">
-    <div class="sign-card-text">
-      <h3>Welcome<br>Back!</h3>
+<div class="container margin2 flex-col">
+  <h1>Welcome back!</h1>
+  <%= form_with(scope: :session, url: login_path, class: "users-form-container") do |f| %>
+    <div class="users-form-shared-email">
+      <%= f.text_field :email, placeholder: "Email", required: true %>
     </div>
-    <div class="sign-card-form">
-      <%= form_with(scope: :session, url: login_path, class: "users-form-container") do |f| %>
-        <div class="users-form-shared-email">
-          <%= f.text_field :email, placeholder: "Email" %>
-        </div>
-        <div class="users-form-shared-pass">
-          <%= f.password_field :password, placeholder: "Password" %>
-        </div>
-        <%= f.submit value: "Log In", class: "btn-sign" %>
-      <% end %>
+    <div class="users-form-shared-pass">
+      <%= f.password_field :password, placeholder: "Password", required: true %>
     </div>
-  </div>
-  <div class="divider"></div>
-  <div class="signup-card">
-     <p>Don't have an account?  <a href="#">Sign up</a></p>
-  </div>
-</section>
+    <%= f.submit value: "Log In", class: "btn-sign" %>
+    <p>Don't have an account?  <a href="#">Sign up</a></p>
+  <% end %>
+</div>

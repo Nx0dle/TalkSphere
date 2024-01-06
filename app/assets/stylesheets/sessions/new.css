@@ -1,0 +1,4 @@
+.users-form-container {
+    width: clamp(200px, 40vw, 550px);
+    margin: 0;
+}

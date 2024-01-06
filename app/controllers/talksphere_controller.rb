@@ -4,7 +4,8 @@ class TalksphereController < ApplicationController
   before_action :require_user
   def index
     @user = User.all
-    @message = Message.all
+    @messages = Message.all
+    @message = Message.new
   end
 
 end
