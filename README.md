@@ -10,3 +10,7 @@
 I've learned and used in this project:
 - ActionCable with webSocket protocol
 - Pico CSS framework
+
+---
+
+  This project belongs to <strong>Przemek Paciorek (Nx0dle)</strong> and it's based on <strong>Mashrur's Hossain Rails course</strong>
