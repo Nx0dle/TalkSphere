@@ -4,7 +4,7 @@ class TalksphereController < ApplicationController
   before_action :require_user
   def index
     @user = User.all
-    @messages = Message.all
+    @messages = Message.custom_display
     @message = Message.new
   end
 

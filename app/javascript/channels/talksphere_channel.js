@@ -11,5 +11,7 @@ consumer.subscriptions.create("TalksphereChannel", {
 
   received(data) {
     $('.messages-field').append(data.body)
+    $('.messages-field').scrollTop($('.messages-field')[0].scrollHeight);
+    $('#message-content').val("").focus();
   }
 });

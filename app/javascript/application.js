@@ -4,15 +4,23 @@ import "controllers"
 import "jquery"
 import "channels"
 
-$(document).on('turbo:load', function() {
-    const themeToggle = document.querySelector('.theme-toggle')
+let scrollBottom = () => {
+    let field = $('.messages-field')
+    if (field.length > 0) {
+        field.scrollTop(field[0].scrollHeight)
+    }
+}
+
+$(document).on('turbo:load', () => {
     const htmlTag = document.documentElement
-    themeToggle.addEventListener('click', () => {
+
+    $('.theme-toggle').on('click', () => {
         if (htmlTag.getAttribute('data-theme') === 'dark') {
-            htmlTag.setAttribute('data-theme', 'light')
+           htmlTag.setAttribute('data-theme', 'light')
         }
         else {
             htmlTag.setAttribute('data-theme', 'dark')
         }
     })
+    scrollBottom()
 })
